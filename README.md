@@ -14,7 +14,8 @@ DATA SOURCES
 DATA
 1. Planktonic foraminifera shell flux time series\
 1.1. all data: dat_sel.RDS\
-1.2. time series with >125 and >150 micron data: dat_small.RDS
+1.2. time series with >125 and >150 micron data: dat_small.RDS\
+1.3. shell flux data in csv format: shell_flux_data.csv
 
 2. ForCenS core top sediment assemblages\
 2.1. all data (excluding duplicates and samples with incomplete taxonomy): forcens_trimmed_compare.RDS\
