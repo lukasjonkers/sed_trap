@@ -1,4 +1,4 @@
-# compare assemblages from sedimnet trap shell flux time series with ForCenS assemblages
+# compare planktonic foraminifera assemblages from sediment trap shell flux time series with ForCenS assemblages
 # script by Lukas Jonkers, last edit: 22 Mar 2019
 
 rm(list = ls())
@@ -250,4 +250,4 @@ plot.LT$group[plot.LT$real.dT <= 0 & plot.LT$lt.dSST > 0] <- 'CW'
 plot.LT$group[plot.LT$real.dT <= 0 & plot.LT$lt.dSST <= 0] <- 'CC'
 plot.LT$consistent <- plot.LT$group == 'WW' | plot.LT$group == 'CC'
 
-saveRDS(plot.LT, 'plot_LT_HadSST_1870-1899.RDS')
+saveRDS(plot.LT, 'plot_LT_HadSST_1870-1899.RDS') # change according to SST product used
