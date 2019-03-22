@@ -6,7 +6,7 @@ library(raster)
 
 # prepare data ####
 # load HadISST SST data
-HadSST <- brick('~/Documents/HadISST/HadISST_sst.nc')
+HadSST <- brick('HadISST_sst.nc')
 
 # replace -1000 by NA
 na.fun <- function(x) {replace(x, x == -1000, NA)}
