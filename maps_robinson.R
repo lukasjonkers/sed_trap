@@ -112,14 +112,6 @@ Fig1 <- ggplot(bbox_robin_df, aes(long,lat)) +
                 legend.margin = margin(0,0,0,0),
                 legend.box.margin = margin(-10, 0,0, -15))
 
-ggsave('~/Dropbox/projects_ongoing/traps_sed/Figs_paper/Fig1.pdf',
-       plot = Fig1,
-       units = 'cm',
-       width = 9,
-       height = 6)
-
-
-
 # Figure 3A ####
 # plot trap sites on map, colour by consistency in trend
 library(maptools)
@@ -172,11 +164,3 @@ Fig3A <- ggplot(bbox_robin_df, aes(long,lat)) +
         legend.key.height = unit(0.1, 'cm'),
         legend.margin = margin(0,0,0,0),
         legend.box.margin = margin(-10, 0,0, 0))
-
-
-
-ggsave('~/Dropbox/projects_ongoing/traps_sed/Figs_paper/Fig3A_viridis.pdf',
-       plot = Fig3A,
-       units = 'cm',
-       width = 9,
-       height = 6)
