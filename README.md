@@ -9,7 +9,7 @@ DATA SOURCES
 * HadISST: Rayner, N. A. et al. Global analyses of sea surface temperature, sea ice, and night marine air temperature since the late nineteenth century. Journal of Geophysical Research: Atmospheres 108, doi:10.1029/2002JD002670 (2003).
 * ERSST v5: Huang, B. et al. NOAA Extended Reconstructed Sea Surface Temperature (ERSST), Version 5. Monthly mean. NOAA National Centers for Environmental Information. doi:10.7289/V5T72FNM. Access date: 14 Sep 2018.  (2017).
 * sediment assemblages: Siccha, M. & Kucera, M. ForCenS, a curated database of planktonic foraminifera census counts in marine surface sediment samples. Scientific Data 4, 170109, doi:10.1038/sdata.2017.109 (2017).
-* sediment traps: see manuscript, extended data table 1
+* sediment traps: citations provided in data files
 
 DATA
 1. Planktonic foraminifera shell flux time series\
