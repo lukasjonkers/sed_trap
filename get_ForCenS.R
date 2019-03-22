@@ -21,7 +21,7 @@ library(sp)
 # munge ForCenS data ####
 # download ForCenS from https://doi.pangaea.de/10.1594/PANGAEA.873570
 # load data, make sure to delete 2nd row manually before import
-ForCenS_raw <- read.delim('~/Dropbox/projects_ongoing/TF_reduction/ForCenS_270917.txt', na.strings = 'N/A')
+ForCenS_raw <- read.delim('ForCenS.txt', na.strings = 'N/A')
 
 # remove rows with species groups
 rm.rows <- unique(c(	
