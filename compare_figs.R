@@ -63,13 +63,6 @@ wtd.cor(abs(plot.LT$real.dT), plot.LT$sqcd.min, weight = plot.LT$duration)
 
 Fig2 <- egg::ggarrange(plots = list(Fig2A, Fig2C, Fig2B), ncol=3)
 
-ggsave('~/Dropbox/projects_ongoing/traps_sed/Figs_paper/Fig2_HadSST.pdf',
-       plot = Fig2,
-       units = 'cm',
-       width = 11,
-       height = 4)
-
-
 # Figure 3 ####
 # histogram of counts per category
 Fig3B <- ggplot(data = plot.LT) +
@@ -87,12 +80,6 @@ Fig3B <- ggplot(data = plot.LT) +
             legend.key.height=unit(0.3, 'cm'))
 
 binom.test(sum(plot.LT$consistent), length(plot.LT$consistent), alternative = 'two.sided')
-
-ggsave('~/Dropbox/projects_ongoing/traps_sed/Figs_paper/Fig3B_HadSST.pdf',
-       plot = Fig3B,
-       units = 'cm',
-       width = 3,
-       height = 5)
 
 # Figure 4 ####
 # interannual variability and sensitivity tests
@@ -129,13 +116,6 @@ Fig4B <- ggplot(data = plot.LT) +
 
 Fig4 <- ggarrange(Fig4A, Fig4B,
           nrow = 2, heights = c(1, 2))
-
-ggsave('~/Dropbox/projects_ongoing/traps_sed/Figs_revision/Fig4_new.pdf',
-       plot = Fig4,
-       units = 'cm',
-       width = 8.9,
-       height = 9)
-
 
 # extended data figures ####
 # estimated age of core tops (ED Fig 1) ####
@@ -209,16 +189,7 @@ FigED2 <- ggplot(mod.dat[[26]], aes(x, y)) +
               strip.text = element_text(size = 5, lineheight = 0.01),
               rect = element_rect(fill = 'transparent')) +
             annotate('text', x = 1.5, y = 0, label = names(dat.sel)[26], size = 1.5)
-
-ggsave('~/Dropbox/projects_ongoing/traps_sed/Figs_final/FigED2.eps',
-       device = cairo_ps,
-       fallback_resolution = 600,
-       plot = FigED2,
-       units = 'cm',
-       width = 5,
-       height = 5)        
-
-
+     
 # sensitivity to size fraction (ED Fig 3) ####
 facetlabels <- c(small = '>125 m', large = '>150 m')
 
@@ -234,16 +205,7 @@ FigED3 <- ggplot(data = plot.LT) +
         strip.text = element_text(size = 5, lineheight = 0.01),
         rect = element_rect(fill = 'transparent'))
 
-ggsave('~/Dropbox/projects_ongoing/traps_sed/Figs_final/FigED3.eps',
-       device = cairo_ps,
-       fallback_resolution = 600,
-       plot = FigED3,
-       units = 'cm',
-       width = 6,
-       height = 4)  
-
 # compare HadISST with ERSSTv5 (ED Fig 4) ####
-
 had.plot <- readRDS('plot_LT_HadSST_1870-1899.RDS')
 ER.plot <- readRDS('plot_LT_ERSST_1854-1883.RDS')
 
@@ -286,11 +248,3 @@ FigS4B <- ggplot(data = plot_data) +
   facet_grid(.~product)
 
 FigED4 <- egg::ggarrange(plots = list(FigS4A, FigS4B), ncol=2)
-
-ggsave('~/Dropbox/projects_ongoing/traps_sed/Figs_final/FigED4.eps',
-       plot = FigED4,
-       device = cairo_ps,
-       fallback_resolution = 600,
-       units = 'cm',
-       width = 10,
-       height = 6)
