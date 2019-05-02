@@ -191,7 +191,9 @@ FigED2 <- ggplot(mod.dat[[26]], aes(x, y)) +
             annotate('text', x = 1.5, y = 0, label = names(dat.sel)[26], size = 1.5)
      
 # sensitivity to size fraction (ED Fig 3) ####
-facetlabels <- c(small = '>125 m', large = '>150 m')
+plot.LT$shell_size <- factor(plot.LT$shell_size, levels = c('small', 'large'),
+                             ordered = TRUE, labels=c(expression('>125 ' *mu* 'm'), expression('>150 ' *mu* 'm')))
+
 
 FigED3 <- ggplot(data = plot.LT) +
   geom_histogram(aes(group, colour = real.trend, fill = trap.trend), stat = 'count', lwd = 0.5, alpha = 0.8) +
@@ -199,7 +201,7 @@ FigED3 <- ggplot(data = plot.LT) +
   scale_colour_manual(values = c('dodgerblue4', 'firebrick3'), guide = 'none') +
   theme_bw() +
   theme(axis.title.x = element_blank()) +
-  facet_grid(.~shell_size, labeller = labeller(shell_size = facetlabels)) +
+  facet_grid(.~shell_size, labeller = label_parsed) +
   theme(text = element_text(size = 7),
         panel.grid = element_blank(),
         strip.text = element_text(size = 5, lineheight = 0.01),
